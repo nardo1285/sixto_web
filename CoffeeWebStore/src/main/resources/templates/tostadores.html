@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html
+  lang="es"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+>
+<head th:replace="/fragments/head :: head"></head>
+<head><title>Sixto Coffee - Tostadores</title></head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+    <div class="container">
+      <a class="navbar-brand" th:href="@{/}">Sixto</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/pv">Puntos de Venta</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="masthead text-center text-white">
+    <div class="masthead-content">
+      <div class="container">
+        <h1 class="masthead-heading mb-0">Match tu coffee</h1>
+        <h3 class="masthead-subheading mb-0">Descubrí tu café</h3>
+        
+      </div>
+    </div>
+    <div class="bg-circle-1 bg-circle"></div>
+    <div class="bg-circle-2 bg-circle"></div>
+    <div class="bg-circle-3 bg-circle"></div>
+    <div class="bg-circle-4 bg-circle"></div>
+  </header>
+<!--Para agregar foto rounded
+  <section>
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 order-lg-2">
+          <div class="p-5">
+            <img class="img-fluid rounded-circle" src="img/m2.jpg" alt="">
+          </div>
+        </div>
+        <div class="col-lg-6 order-lg-1">
+          <div class="p-5">
+            <h2 class="display-4" ></h2>
+            <p ></p>
+          </div>
+      </div>
+    </div>
+  </section>
+-->
+  <section>
+    <div class="jumbotron">
+      <h1 class="display-4">Descubre aquí tu tostador favorito</h1>
+      <p class="lead">De cada rincón de la Argentina, sabores y aromas de todas partes del mundo cafetero.</p>
+      <hr class="my-4">
+      <p class="lead ">Buscá aquí por zona.</p>
+
+      <!-- <nav class="navbar navbar-light bg-light"> 
+        <form class="form-inline">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar por Zona</button>
+        </form> -->
+      </nav>
+      <a class="btn btn-primary rounded-pill mt-4" href="#" role="button">Aprende más</a>
+    </div>
+  </section>
+  <section class="masthead text-center">
+    <h2 class="display-3">¿Sos tostador?</h2>
+    
+              <a th:href="@{/t/registro-tostador}" class="btn btn-primary btn-xl rounded-pill mt-5">¡Registrate!</a>
+              <br>
+              <p class="lead">
+                Dejá conocer al mundo tus sabores.
+             </p>
+              
+              <a th:href="@{/t/login-tostador}" class="btn btn-primary btn-xl rounded-pill mt-5">Ingresá</a>
+              <p class="lead">
+                Ya tengo cuenta
+             </p>
+              <div>
+                <br>
+                <br>
+              </div>
+  </section>
+
+    <!--
+  <section>
+    <div class="dropdown-menu">
+      <form class="px-4 py-3">
+        <div class="form-group">
+
+          <label for="exampleDropdownFormEmail1">Correo electrónico</label>
+          <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+        </div>
+        <div class="form-group">
+          <label for="exampleDropdownFormPassword1">Contraseña</label>
+          <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+        </div>
+        <div class="form-group">
+          <div class="form-check">
+            <input type="checkbox" class="form-check-input" id="dropdownCheck">
+            <label class="form-check-label" for="dropdownCheck">
+            Recordarme
+            </label>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Ingresar</button>
+      </form>
+      <div class="dropdown-divider"></div>
+      <a class="dropdown-item" href="/tostador/registro-tostador">¿Aún no mostrás tu café al mundo? ¡Registrate!</a>
+      <a class="dropdown-item" href="#">Forgot password?</a>
+    </div>
+    </section>
+  -->
+
+    <!-- Footer -->
+    <footer th:replace="/fragments/footer :: footer"></footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

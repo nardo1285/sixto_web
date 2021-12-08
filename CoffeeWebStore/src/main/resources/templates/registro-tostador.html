@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html
+  lang="es"
+  xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:th="http://www.thymeleaf.org"
+>
+<head th:replace="/fragments/head :: head"></head>
+<head><title>Sixto Coffee - Registro Tostador</title></head>
+
+  <body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Sixto</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" th:href="@{/t/tostadores}">Tostadores</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Puntos de Venta</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <!-- <h1 class="masthead-heading mb-0">Registrate</h1> -->
+          <h3 class="masthead-subheading mb-0">Llevale al mundo tu café</h3>
+        </div>
+      </div>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="/img/m1.jpeg" alt="" />
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <form
+                th:action="@{/t/registro-tostador}"
+                method="POST"
+                enctype="multipart/form-data"
+              >
+                <div
+                  th:if="${error != null}"
+                  th:text="${error}"
+                  class="
+                    card
+                    text-white
+                    bg-danger
+                    mb-3
+                    text-center"
+                  >
+                
+              </div>
+                <div th:if="${exito != null}"
+                    th:text="${exito}"
+                    class="card text-white bg-success mb-3 text-center"
+                > 
+                </div>
+
+              </div>
+
+              <div>
+                <label>Nombre</label>
+                <input type="text" class="form-control" placeholder="Nombre comercial" name="nombre" th:value="${nombre}">
+              
+                <label>Responsable de Cuenta</label>
+                <input type="text" class="form-control" placeholder="Nombre del responsable de cuenta" name="responsableCuenta"
+                  th:value="${responsableCuenta}">
+              
+                <label>E-Mail</label>
+                <input type="email" class="form-control" placeholder="tostador@ejemplo.com" name="mail" th:value="${mail}">
+              
+                <label>Logo o Imagen </label>
+                <input type="file" class="form-control" th:name="@{archivo}">
+                
+                <label>Tu ubicación</label>
+                <select class="form-control" name="idZona">
+                  <option th:each="zona : ${zonas}" th:value="${zona.id}" th:text="${zona.nombre}"></option>
+                </select>
+                
+                <label>Clave</label>
+                <input type="password" class="form-control" placeholder="Mínimo 6 caracteres"  name="password1" th:value="${password1}">
+
+                <label>Repetir Clave</label>
+                <input type="password" class="form-control" placeholder="Mínimo 6 caracteres" name="password2" th:value="${password2}">
+
+                <br />
+                <br>
+                <button type="submit" class="btn btn-primary">
+                  Registrarme
+                </button>
+
+                </div>
+                <div>
+                  <br>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer th:replace="/fragments/footer :: footer"></footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

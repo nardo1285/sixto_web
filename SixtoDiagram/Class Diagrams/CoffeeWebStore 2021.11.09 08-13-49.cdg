@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="CoffeeWebStore">
+  <ClassDiagramComponents>
+    <Class name="SixtoApplication" package="com.coffee.Sixto" visibility="public" xPosition="104.0" yPosition="76.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="String[]" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="tostador" package="" visibility="public" xPosition="333.0" yPosition="204.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="metodos" package="" visibility="public" xPosition="33.0" yPosition="310.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="Cafe" package="" visibility="public" xPosition="294.0" yPosition="351.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="elabora" source="tostador" target="Cafe" type="Composition" sourceCardinality="0..1" targetCardinality="1..*" collectionType="List"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
