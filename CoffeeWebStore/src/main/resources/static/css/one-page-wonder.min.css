@@ -58,7 +58,7 @@ header.masthead {
   overflow: hidden;
   padding-top: calc(7rem + 72px);
   padding-bottom: 7rem;
-  background: linear-gradient(0deg, #ff6a00 0, #ee0979 100%);
+  background: linear-gradient(0deg, #da811c 0, #964300 100%);
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: scroll;
@@ -71,6 +71,7 @@ header.masthead .masthead-content {
 header.masthead .masthead-content .masthead-heading {
   font-size: 4rem;
 }
+
 header.masthead .masthead-content .masthead-subheading {
   font-size: 2rem;
 }
@@ -78,7 +79,7 @@ header.masthead .bg-circle {
   z-index: 0;
   position: absolute;
   border-radius: 100%;
-  background: linear-gradient(0deg, #ee0979 0, #ff6a00 100%);
+  background: linear-gradient(0deg, #964300 0, #da811c 100%);
 }
 header.masthead .bg-circle-1 {
   height: 90rem;
@@ -104,6 +105,10 @@ header.masthead .bg-circle-4 {
   top: -5rem;
   right: 35%;
 }
+.bgi-h1 {
+  background-image: url(/src/main/resources/static/img/coffee-4271740.jpg);
+  background-size: cover;
+}
 @media (min-width: 992px) {
   header.masthead {
     padding-top: calc(10rem + 55px);
@@ -117,17 +122,17 @@ header.masthead .bg-circle-4 {
   }
 }
 .bg-primary {
-  background-color: #ee0979 !important;
+  background-color: #da811c !important;
 }
 .btn-primary {
-  background-color: #ee0979;
-  border-color: #ee0979;
+  background-color: #da811c;
+  border-color: #da811c;
 }
 .btn-primary:active,
 .btn-primary:focus,
 .btn-primary:hover {
-  background-color: #bd0760 !important;
-  border-color: #bd0760 !important;
+  background-color: #964300 !important;
+  border-color: #964300 !important;
 }
 .btn-primary:focus {
   box-shadow: 0 0 0 0.2rem rgba(238, 9, 121, 0.5);
