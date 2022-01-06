@@ -55,35 +55,18 @@
         <div class="row align-items-center">
           <div class="col-lg-6 order-lg-2">
             <div class="p-5">
-              <img class="img-fluid rounded-circle" src="/img/m1.jpeg" alt="" />
+                <img class="img-fluid rounded-circle" src="../static/img/alin-luna-MliW55PdPaA-unsplash.jpg" alt="coffee-love" />
             </div>
           </div>
           <div class="col-lg-6 order-lg-1">
             <div class="p-5">
-              <form
-                th:action="@{/t/registro-tostador}"
-                method="POST"
-                enctype="multipart/form-data"
-              >
-                <div
-                  th:if="${error != null}"
-                  th:text="${error}"
-                  class="
-                    card
-                    text-white
-                    bg-danger
-                    mb-3
-                    text-center"
-                  >
-                
+              <form th:action="@{/t/registro-tostador}" method="POST" enctype="multipart/form-data">
+              <div th:if="${error != null}" th:text="${error}" class="card text-white bg-danger mb-3 text-center">
               </div>
-                <div th:if="${exito != null}"
-                    th:text="${exito}"
-                    class="card text-white bg-success mb-3 text-center"
-                > 
-                </div>
+              <div th:if="${exito != null}" th:text="${exito}" class="card text-white bg-success mb-3 text-center"> 
+              </div>
 
-              </div>
+            </div>
 
               <div>
                 <label>Nombre</label>

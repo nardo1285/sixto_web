@@ -65,8 +65,6 @@ public class TostadorControlador {
     }
 			
 
-    
-        
     @PostMapping("/registro-tostador")
     public String login(ModelMap modelo, MultipartFile archivo, @RequestParam String nombre, @RequestParam String responsableCuenta, 
                         @RequestParam String mail, @RequestParam String password1, @RequestParam String password2, @RequestParam String idZona) throws ErroresSixto{
